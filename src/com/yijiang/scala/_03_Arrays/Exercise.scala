@@ -3,6 +3,7 @@ package com.yijiang.scala._03_Arrays
 object Exercise {
 
   def main(args: Array[String]): Unit = {
+    //第二题
     val arr = Array(2,9,10)
     val a = null
     val array = swapAdjacentEleOfArray(arr)
@@ -10,6 +11,7 @@ object Exercise {
   }
 
   //第一题
+  //第二题
   def swapAdjacentEleOfArray(arr:Array[Int]): Array[Int] = {
     if (arr == null || arr.length == 0) None
     if(arr.length == 1) arr else {
@@ -21,4 +23,8 @@ object Exercise {
       arr
     }
   }
+  //第三题
+
+
+
 }
