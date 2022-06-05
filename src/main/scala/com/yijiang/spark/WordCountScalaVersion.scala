@@ -16,7 +16,12 @@ object WordCountScalaVersion {
 
     val resPair = pairWord.reduceByKey((oldValue: Int, newValue: Int) => oldValue + newValue)
 
-    resPair.foreach(println)
+    val res = resPair.map(x => {
+      (x._2, 1)
+    }).reduceByKey(_ + _)
 
+    res.foreach(println)
+
+    Thread.sleep(Long.MaxValue)
   }
 }
