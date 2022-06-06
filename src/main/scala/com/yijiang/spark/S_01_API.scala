@@ -48,11 +48,23 @@ object S_01_API {
 
     //需求七：演示cogroup的用法
     val cogroupRDD = src3RDD.cogroup(src4RDD)
-    cogroupRDD.foreach(println)
+//    cogroupRDD.foreach(println)
 
     //需求八：求两个RDD的join的结果
     val joinRDD = src3RDD.join(src4RDD)
-    joinRDD.foreach(println)
+//    joinRDD.foreach(println)
+
+    //需求九：两个RDD左外关联
+    val leftOuterJoinRDD = src3RDD.leftOuterJoin(src4RDD)
+    leftOuterJoinRDD.foreach(println)
+
+    //需求十：两个RDD右外关联
+    val rightOuterJoinRDD = src3RDD.rightOuterJoin(src4RDD)
+    rightOuterJoinRDD.foreach(println)
+
+    //需求十一：两个RDD全外关联
+    val fullOuterJoinRDD = src3RDD.fullOuterJoin(src4RDD)
+    fullOuterJoinRDD.foreach(println)
 
 
 
