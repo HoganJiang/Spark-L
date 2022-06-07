@@ -65,9 +65,5 @@ object S_01_API {
     //需求十一：两个RDD全外关联
     val fullOuterJoinRDD = src3RDD.fullOuterJoin(src4RDD)
     fullOuterJoinRDD.foreach(println)
-
-
-
-
   }
 }
